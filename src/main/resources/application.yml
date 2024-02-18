@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: lubid-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: lubid-user
+          uri: lb://lubid-user
+          predicates:
+            - Path=/lubid-user/**
+server:
+  port: 7777
