@@ -10,6 +10,18 @@ spring:
             - Path=/lubid-user/**
           filters:
             - RequestCheckFilter
+        - id: lubid-product
+          uri: lb://lubid-product
+          predicates:
+            - Path=/lubid-product/**
+          filters:
+            - RequestCheckFilter
+        - id: lubid-live
+          uri: lb://lubid-live
+          predicates:
+            - Path=/lubid-live/**
+          filters:
+            - RequestCheckFilter
 server:
   port: 7777
 

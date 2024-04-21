@@ -62,9 +62,7 @@ public class PreFlightCorsConfiguration {
                     return Mono.empty();
                 }
             }
-
             return chain.filter(ctx);
-
         };
 
     }
